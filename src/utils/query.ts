@@ -1,5 +1,4 @@
 import { TokenID } from "../tokenid";
-import { ObjectTokenID } from "../types";
 
 export const tokenIDNumberQueryFilter = (tokenID: number) => {
   return {
@@ -13,12 +12,14 @@ export const tokenIDHexQueryFilter = (hexTokenID: string) => {
   };
 };
 
-export const tokenIDQueryFilter = (tokenID: string | number) => {
-  const t = TokenID.from(tokenID);
-
+export const tokenIDObjectQueryFilter = (t: TokenID) => {
   if (t.isBig) {
     return tokenIDHexQueryFilter(t.hexTokenID);
   }
 
   return tokenIDNumberQueryFilter(t.tokenID);
+};
+
+export const tokenIDQueryFilter = (tokenID: string | number) => {
+  return tokenIDObjectQueryFilter(TokenID.from(tokenID));
 };

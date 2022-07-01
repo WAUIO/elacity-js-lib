@@ -34,6 +34,15 @@ export class TokenID {
   }
 
   /**
+   * Convert tokenID into string
+   * 
+   * @returns 
+   */
+  toString(): string {
+    return this.hexTokenID;
+  }
+
+  /**
    * Create from a generic value hex, string, number (coming from blockchain events especially)
    *
    * @param input
