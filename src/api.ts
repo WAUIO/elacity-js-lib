@@ -1,6 +1,6 @@
-import { CHAIN_ID } from "./network/chainId";
+import { ChainID } from "./network/chainId";
 
-export const API_URL: Record<CHAIN_ID, string> = {
-  [CHAIN_ID.MAINNET]: "https://ela.city/api",
-  [CHAIN_ID.TESTNET]: "https://staging.ela.city/api",
+export const API_URL: Record<ChainID, string> = {
+  [ChainID.MAINNET]: "https://ela.city/api",
+  [ChainID.TESTNET]: "https://staging.ela.city/api",
 };

@@ -1,4 +1,4 @@
-export enum CHAIN_ID {
+export enum ChainID {
   TESTNET = 3,
   MAINNET = 20,
 }
