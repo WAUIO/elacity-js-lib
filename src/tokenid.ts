@@ -1,4 +1,4 @@
-import { BigNumber } from "@ethersproject/bignumber";
+import { BigNumber, BigNumberish } from "@ethersproject/bignumber";
 import { ObjectTokenID } from "./types";
 
 /**
@@ -19,6 +19,15 @@ export class TokenID {
       // console.warn('[TokenID] num value not defined, trying to build from hex value');
       this.tokenID = parseInt(this.hexTokenID, 16);
     }
+  }
+
+  /**
+   * Output a bignumber value
+   * 
+   * @returns 
+   */
+  toBigNumber() {
+    return BigNumber.from(this.hexTokenID)
   }
 
   /**
