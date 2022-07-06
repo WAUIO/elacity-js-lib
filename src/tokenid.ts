@@ -1,5 +1,5 @@
 import { BigNumber, BigNumberish } from "@ethersproject/bignumber";
-import { ObjectTokenID } from "./types";
+import { ObjectTokenID } from "src/types/tokenid";
 
 /**
  * Represents a tokenID overall the system
@@ -22,11 +22,12 @@ export class TokenID {
   }
 
   /**
-   * Output a bignumber value
+   * Output a bignumber value, we mainly use .hexTokenID as its value 
+   * is always ensured except if it's null (0x00)
    * 
    * @returns 
    */
-  toBigNumber() {
+  toBigNumber(): BigNumberish {
     return BigNumber.from(this.hexTokenID)
   }
 
