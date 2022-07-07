@@ -5,3 +5,5 @@ export { default as INTERFACE_FACTORY_ERC1155_PUBLIC } from "./erc1155.factory.p
 export { default as INTERFACE_FACTORY_ERC1155_PRIVATE } from "./erc1155.factory.private";
 export { default as INTERFACE_FACTORY_ERC721_PUBLIC } from "./erc721.factory.public";
 export { default as INTERFACE_FACTORY_ERC721_PRIVATE } from "./erc721.factory.private";
+export { default as INTERFACE_AUCTION } from "./auction";
+export { default as INTERFACE_MARKETPLACE } from "./marketplace";
