@@ -1,10 +1,14 @@
 import { BigNumber, BigNumberish } from "@ethersproject/bignumber";
 import { ObjectTokenID } from "src/types/tokenid";
 
+export interface ITokenID {
+  toString(): string;
+}
+
 /**
  * Represents a tokenID overall the system
  */
-export class TokenID {
+export class TokenID implements ITokenID {
   readonly tokenID: number;
   readonly hexTokenID: string;
   readonly isBig: boolean;
@@ -44,12 +48,21 @@ export class TokenID {
   }
 
   /**
-   * Convert tokenID into string
+   * Ouput the hexadecimal value
+   * 
+   * @returns 
+   */
+  toHex() {
+    return this.hexTokenID;
+  }
+
+  /**
+   * Convert tokenID into interger as string
    * 
    * @returns 
    */
   toString(): string {
-    return this.hexTokenID;
+    return this.toBigNumber().toString();
   }
 
   /**
