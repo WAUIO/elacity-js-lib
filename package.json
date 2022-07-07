@@ -1,6 +1,6 @@
 {
   "name": "@elacity-js/lib",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Elacity internal library",
   "scripts": {
     "rollup": "rollup -c",
