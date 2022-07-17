@@ -7,3 +7,4 @@ export { default as INTERFACE_FACTORY_ERC721_PUBLIC } from "./erc721.factory.pub
 export { default as INTERFACE_FACTORY_ERC721_PRIVATE } from "./erc721.factory.private";
 export { default as INTERFACE_AUCTION } from "./auction";
 export { default as INTERFACE_MARKETPLACE } from "./marketplace";
+export { default as INTERFACE_MARKETPLACE_AGGREGATOR } from "./marketplace.aggregator";
