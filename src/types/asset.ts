@@ -39,4 +39,6 @@ export interface OwnerInfo {
   avatar?: string;
   alias?: string;
   did?: string;
+  trustLevel?: number;
+  kycOk?: boolean;
 }
