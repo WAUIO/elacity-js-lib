@@ -92,6 +92,28 @@ async function fromBufferToBase64DataURL(rawData: Buffer): Promise<string> {
   return `data:${mimeType};base64,${rawFileToBase64(rawData)}`;
 }
 
+export type FileValue = string | File | null;
+
+/**
+ * Convert a file / string into a base64 data url usable on UI.
+ * 
+ * @param file 
+ * @param defaultImage 
+ * @returns 
+ */
+const asImageURL = (file: FileValue, defaultImage?: string): string => {
+  if (!file) {
+    return defaultImage || null;
+  }
+
+  if (typeof file === 'string') {
+    return file;
+  }
+
+  return URL.createObjectURL(file as File);
+}
+
 export default {
-  fromBufferToBase64DataURL
+  fromBufferToBase64DataURL,
+  asImageURL
 }
